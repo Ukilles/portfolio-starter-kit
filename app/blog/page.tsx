@@ -1,15 +1,45 @@
-import { BlogPosts } from 'app/components/posts'
+'use client';
+import { useEffect } from 'react';
 
-export const metadata = {
-  title: 'Blog',
-  description: 'Read my blog.',
-}
+export default function Home() {
+  useEffect(() => {
+    const audio = new Audio('/heartbeat-chant.mp3'); // Placeholder for custom sound
+    audio.volume = 0.5;
+    audio.play();
+  }, []);
 
-export default function Page() {
   return (
-    <section>
-      <h1 className="font-semibold text-2xl mb-8 tracking-tighter">My Blog</h1>
-      <BlogPosts />
-    </section>
-  )
+    <main className="min-h-screen flex flex-col items-center justify-center bg-black text-white p-6 space-y-12">
+      <div className="text-center space-y-6">
+        <img
+          src="/Logo04.jpg"
+          alt="Inkverse Logo"
+          className="w-48 h-auto mx-auto drop-shadow-lg"
+        />
+        <h1 className="text-5xl md:text-6xl font-extrabold tracking-wider text-purple-400">
+          WELCOME TO THE INKVERSE
+        </h1>
+        <p className="italic text-xl text-gray-400">
+          A universe written in shadow, sealed in ink.
+        </p>
+        <button className="mt-8 bg-purple-600 hover:bg-purple-800 text-white px-6 py-3 text-lg rounded-2xl shadow-lg transition-all">
+          ENTER
+        </button>
+      </div>
+
+      <div className="text-center max-w-2xl text-gray-300">
+        <p className="text-lg">
+          Stories beyond dimensions. Worlds built in chaos.
+        </p>
+        <p className="text-base italic mt-4">
+          This ain’t just a book—it’s a damn portal.
+        </p>
+        <p className="text-yellow-300 text-xl mt-6">Chronicles Begin Soon.</p>
+      </div>
+
+      <footer className="absolute bottom-4 text-sm text-gray-600">
+        © 2025 Inkverse. All rights warped.
+      </footer>
+    </main>
+  );
 }
