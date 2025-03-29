@@ -2,7 +2,7 @@
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-black text-white p-6 space-y-12">
+    <main className="min-h-screen flex flex-col items-center justify-center text-white p-6 space-y-12">
       <div className="text-center space-y-6">
         <img
           src="/Logo04.jpg"
