@@ -1,13 +1,6 @@
 'use client';
-import { useEffect } from 'react';
 
 export default function Home() {
-  useEffect(() => {
-    const audio = new Audio('/heartbeat-chant.mp3'); // Placeholder for custom sound
-    audio.volume = 0.5;
-    audio.play();
-  }, []);
-
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-black text-white p-6 space-y-12">
       <div className="text-center space-y-6">
@@ -43,3 +36,4 @@ export default function Home() {
     </main>
   );
 }
+
