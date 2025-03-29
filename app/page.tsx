@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Inkverse | Stories Written in Shadow",
   description: "Enter the Inkverse — a portal to tales beyond dimensions. Discover lore, darkness, chaos, and the chronicles that shape it all.",
-  keywords: ["Inkverse", "Chronicles of Ink", "multiverse", "sci-fi lore", "dark fantasy", "RPG universe", "alien story", "sci-fi book", "Stellaxis"],
+  keywords: ["Inkverse", "Chronicles of Ink", "sci-fi", "dark fantasy", "RPG universe"],
   authors: [{ name: "Luciano Gomez" }],
   creator: "Luciano Gomez",
   themeColor: "#000000",
@@ -22,7 +22,6 @@ export const metadata = {
     type: "website",
   },
 };
-
 'use client';
 
 export default function Home() {
