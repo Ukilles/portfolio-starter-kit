@@ -1,98 +1,45 @@
-import { notFound } from 'next/navigation'
-import { CustomMDX } from 'app/components/mdx'
-import { formatDate, getBlogPosts } from 'app/blog/utils'
-import { baseUrl } from 'app/sitemap'
+'use client';
+import { useEffect } from 'react';
 
-export async function generateStaticParams() {
-  let posts = getBlogPosts()
-
-  return posts.map((post) => ({
-    slug: post.slug,
-  }))
-}
-
-export function generateMetadata({ params }) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug)
-  if (!post) {
-    return
-  }
-
-  let {
-    title,
-    publishedAt: publishedTime,
-    summary: description,
-    image,
-  } = post.metadata
-  let ogImage = image
-    ? image
-    : `${baseUrl}/og?title=${encodeURIComponent(title)}`
-
-  return {
-    title,
-    description,
-    openGraph: {
-      title,
-      description,
-      type: 'article',
-      publishedTime,
-      url: `${baseUrl}/blog/${post.slug}`,
-      images: [
-        {
-          url: ogImage,
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-      images: [ogImage],
-    },
-  }
-}
-
-export default function Blog({ params }) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug)
-
-  if (!post) {
-    notFound()
-  }
+export default function Home() {
+  useEffect(() => {
+    const audio = new Audio('/heartbeat-chant.mp3'); // Placeholder for custom sound
+    audio.volume = 0.5;
+    audio.play();
+  }, []);
 
   return (
-    <section>
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BlogPosting',
-            headline: post.metadata.title,
-            datePublished: post.metadata.publishedAt,
-            dateModified: post.metadata.publishedAt,
-            description: post.metadata.summary,
-            image: post.metadata.image
-              ? `${baseUrl}${post.metadata.image}`
-              : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-            url: `${baseUrl}/blog/${post.slug}`,
-            author: {
-              '@type': 'Person',
-              name: 'My Portfolio',
-            },
-          }),
-        }}
-      />
-      <h1 className="title font-semibold text-2xl tracking-tighter">
-        {post.metadata.title}
-      </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          {formatDate(post.metadata.publishedAt)}
+    <main className="min-h-screen flex flex-col items-center justify-center bg-black text-white p-6 space-y-12">
+      <div className="text-center space-y-6">
+        <img
+          src="/Logo04.jpg"
+          alt="Inkverse Logo"
+          className="w-48 h-auto mx-auto drop-shadow-lg"
+        />
+        <h1 className="text-5xl md:text-6xl font-extrabold tracking-wider text-purple-400">
+          WELCOME TO THE INKVERSE
+        </h1>
+        <p className="italic text-xl text-gray-400">
+          A universe written in shadow, sealed in ink.
         </p>
+        <button className="mt-8 bg-purple-600 hover:bg-purple-800 text-white px-6 py-3 text-lg rounded-2xl shadow-lg transition-all">
+          ENTER
+        </button>
       </div>
-      <article className="prose">
-        <CustomMDX source={post.content} />
-      </article>
-    </section>
-  )
+
+      <div className="text-center max-w-2xl text-gray-300">
+        <p className="text-lg">
+          Stories beyond dimensions. Worlds built in chaos.
+        </p>
+        <p className="text-base italic mt-4">
+          This ain’t just a book—it’s a damn portal.
+        </p>
+        <p className="text-yellow-300 text-xl mt-6">Chronicles Begin Soon.</p>
+      </div>
+
+      <footer className="absolute bottom-4 text-sm text-gray-600">
+        © 2025 Inkverse. All rights warped.
+      </footer>
+    </main>
+  );
 }
