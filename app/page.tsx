@@ -11,13 +11,13 @@ export const metadata = {
     url: "https://www.enterinkverse.com",
     siteName: "Inkverse",
     images: [
-      {
-        url: "/Logo04.jpg",
-        width: 800,
-        height: 600,
-        alt: "Inkverse Logo",
-      },
-    ],
+  {
+    url: "https://www.enterinkverse.com/Logo04.jpg",
+    width: 800,
+    height: 600,
+    alt: "Inkverse Logo",
+  },
+],
     locale: "en_US",
     type: "website",
   },
