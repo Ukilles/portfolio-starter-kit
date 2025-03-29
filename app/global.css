@@ -148,3 +148,18 @@ table {
 .title {
   text-wrap: balance;
 }
+@keyframes starScroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1000px 1000px;
+  }
+}
+
+body {
+  background: radial-gradient(ellipse at bottom, #000 0%, #0b0b1f 100%);
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  background-repeat: repeat;
+  animation: starScroll 120s linear infinite;
+}
