@@ -15,9 +15,9 @@ export default function Home() {
         <p className="italic text-xl text-gray-400">
           A universe written in shadow, sealed in ink.
         </p>
-        <button className="mt-8 bg-purple-600 hover:bg-purple-800 text-white px-6 py-3 text-lg rounded-2xl shadow-lg transition-all">
-          ENTER
-        </button>
+        <button className="mt-8 px-6 py-3 text-lg rounded-2xl text-white shadow-xl bg-purple-600 hover:bg-purple-800 transition-all animate-pulse hover:scale-105 hover:shadow-[0_0_25px_rgba(168,85,247,0.8)] duration-300">
+  ENTER
+</button>
       </div>
 
       <div className="text-center max-w-2xl text-gray-300">
