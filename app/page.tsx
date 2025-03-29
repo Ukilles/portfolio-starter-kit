@@ -1,3 +1,28 @@
+export const metadata = {
+  title: "Inkverse | Stories Written in Shadow",
+  description: "Enter the Inkverse — a portal to tales beyond dimensions. Discover lore, darkness, chaos, and the chronicles that shape it all.",
+  keywords: ["Inkverse", "Chronicles of Ink", "multiverse", "sci-fi lore", "dark fantasy", "RPG universe", "alien story", "sci-fi book", "Stellaxis"],
+  authors: [{ name: "Luciano Gomez" }],
+  creator: "Luciano Gomez",
+  themeColor: "#000000",
+  openGraph: {
+    title: "Inkverse",
+    description: "This ain't just a book — it's a damn portal.",
+    url: "https://www.enterinkverse.com",
+    siteName: "Inkverse",
+    images: [
+      {
+        url: "/Logo04.jpg",
+        width: 800,
+        height: 600,
+        alt: "Inkverse Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
+
 'use client';
 
 export default function Home() {
