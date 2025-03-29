@@ -1,5 +1,3 @@
-'use client'; 
-
 export const metadata = {
   title: "Inkverse | Stories Written in Shadow",
   description: "Enter the Inkverse — a portal to tales beyond dimensions. Discover lore, darkness, chaos, and the chronicles that shape it all.",
