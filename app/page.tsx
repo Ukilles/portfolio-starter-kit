@@ -5,10 +5,10 @@ export default function Home() {
    <main className="min-h-screen flex flex-col items-center justify-center space-y-12">
       <div className="text-center space-y-6">
         <img
-          src="/Logo04.jpg"
-          alt="Inkverse Logo"
-          className="w-142 h-auto mx-auto drop-shadow-2xl"
-        />
+  src="/Logo04.jpg"
+  alt="Inkverse Logo"
+  className="w-[172px] h-auto mx-auto drop-shadow-2xl"
+/>
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-wider text-purple-400">
           WELCOME TO THE INKVERSE
         </h1>
