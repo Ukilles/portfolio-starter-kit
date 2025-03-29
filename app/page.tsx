@@ -7,7 +7,7 @@ export default function Home() {
         <img
           src="/Logo04.jpg"
           alt="Inkverse Logo"
-          className="w-48 h-auto mx-auto drop-shadow-lg"
+          className="w-72 h-auto mx-auto drop-shadow-2xl"
         />
         <h1 className="text-5xl md:text-6xl font-extrabold tracking-wider text-purple-400">
           WELCOME TO THE INKVERSE
