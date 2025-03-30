@@ -41,7 +41,7 @@ export default function Home() {
         <button className="mt-8 px-6 py-3 text-lg rounded-2xl text-white shadow-xl bg-purple-600 hover:bg-purple-800 transition-all animate-pulse hover:scale-105 hover:shadow-[0_0_25px_rgba(168,85,247,0.8)] duration-300">
   ENTER
 </button>
-<form className="mt-10 w-full max-w-sm mx-auto">
+<form action="https://formsubmit.co/ukilles@gmail.com" method="POST" className="mt-10 w-full max-w-sm mx-auto">
   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
     Join the Resistance. Get updates from the Inkverse.
   </label>
