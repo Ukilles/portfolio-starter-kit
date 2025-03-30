@@ -25,7 +25,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-   <main className="min-h-screen flex flex-col items-center justify-center space-y-12">
+    </main className="min-h-screen flex flex-col items-center justify-center space-y-12">
       <div className="text-center space-y-6">
         <img
   src="/Logo04.jpg"
