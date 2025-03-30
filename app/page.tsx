@@ -2,30 +2,6 @@
 
 import Link from 'next/link';
 
-export const metadata = {
-  title: "Inkverse | Stories Written in Shadow",
-  description: "Enter the Inkverse — a portal to tales beyond dimensions. Discover lore, darkness, chaos, and the chronicles that shape it all.",
-  keywords: ["Inkverse", "Chronicles of Ink", "sci-fi", "dark fantasy", "RPG universe"],
-  authors: [{ name: "Luciano Gomez" }],
-  creator: "Luciano Gomez",
-  themeColor: "#000000",
-  openGraph: {
-    title: "Inkverse",
-    description: "This ain't just a book — it's a damn portal.",
-    url: "https://www.enterinkverse.com",
-    siteName: "Inkverse",
-    images: [
-      {
-        url: "https://www.enterinkverse.com/Logo04.jpg",
-        width: 800,
-        height: 600,
-        alt: "Inkverse Logo",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-};
 
 export default function Home() {
   return (
