@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useTypewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 
 export default function EchoPrimeTeaser() {
@@ -31,6 +31,13 @@ Proceed with caution.`;
         clearInterval(typingInterval);
       }
     }, 18);
+    const [text] = useTypewriter({
+  words: ['TRANSMISSION INTERCEPTED'],
+  loop: 1,
+  typeSpeed: 70,
+  deleteSpeed: 0,
+  delaySpeed: 1000,
+});
     return () => clearInterval(typingInterval);
   }, [visible]);
 
@@ -47,21 +54,22 @@ Proceed with caution.`;
         transition={{ duration: 1.5 }}
         className="text-center space-y-6 max-w-3xl z-10"
       >
-        <h1 className="text-3xl md:text-5xl font-bold glitch" data-text="TRANSMISSION INTERCEPTED">
-          TRANSMISSION INTERCEPTED
+       <h1 className="text-3xl md:text-5xl font-bold glitch text-green-400">
+            TRANSMISSION INTERCEPTED
         </h1>
         <p className="text-lg md:text-xl text-green-300 leading-relaxed whitespace-pre-wrap">
           {typedText}
         </p>
-        <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 6, duration: 1 }}
-          className="mt-6 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-800 transition-all shadow-md hover:scale-105"
-          onClick={() => window.location.href = '/lore'}
-        >
-          Continue to Lore
-        </motion.button>
+       <motion.button
+  whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}
+  animate={{ y: [0, -5, 0] }}
+  transition={{ repeat: Infinity, duration: 2 }}
+  className="mt-6 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-800 transition-all shadow-md"
+  onClick={() => window.location.href = '/lore'}
+>
+  Continue to Lore
+</motion.button>
       </motion.div>
 
       <style jsx>{`
