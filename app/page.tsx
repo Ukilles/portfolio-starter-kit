@@ -42,12 +42,9 @@ export default function Home() {
   ENTER
 </button>
 <form action="https://formsubmit.co/ukilles@gmail.com" method="POST" className="mt-10 w-full max-w-sm mx-auto">
-  <input type="hidden" name="_captcha" value="false" />
-  
   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
     Join the Resistance. Get updates from the Inkverse.
   </label>
-
   <div className="flex space-x-2">
     <input
       type="email"
@@ -57,15 +54,6 @@ export default function Home() {
       placeholder="you@galaxy.net"
       className="flex-1 px-4 py-2 rounded-lg bg-gray-800 text-white placeholder-gray-500 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
     />
-    <button
-      type="submit"
-      className="px-4 py-2 rounded-lg bg-purple-700 hover:bg-purple-900 transition-all text-white"
-    >
-      Join
-    </button>
-  </div>
-</form>
-
     <button
       type="submit"
       className="px-4 py-2 rounded-lg bg-purple-700 hover:bg-purple-900 transition-all text-white"
@@ -93,4 +81,3 @@ export default function Home() {
     </main>
     );
 }
-
