@@ -41,6 +41,11 @@ export default function Home() {
         <a href="/lore">
   <button className="mt-8 px-6 py-3 text-lg rounded-2xl text-white shadow-xl bg-purple-600 hover:bg-purple-800 transition-all animate-pulse hover:scale-105 hover:shadow-[0_0_25px_rgba(168,85,247,0.8)] duration-300">
     ENTER
+    <Link href="/echo-prime">
+  <button className="your-button-classes">ENTER</button>
+</Link>
+import Link from 'next/link'
+
   </button>
 </a>
 <form action="https://formsubmit.co/ukilles@gmail.com" method="POST" className="mt-10 w-full max-w-sm mx-auto">
