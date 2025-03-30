@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 export default function EchoPrimeTeaser() {
   const [visible, setVisible] = useState(false);
   const [typedText, setTypedText] = useState('');
+
   const fullText = `This message was not meant for your eyes.
 
 Echo Prime was never found—it was unleashed.
@@ -15,6 +16,14 @@ Orbiting just beyond Stellaxis, the derelict station drifts with purpose, haunte
 Inside its hollow walls, something stirs. Records erased. Coordinates corrupted. Signals looping. Anomalies detected.
 
 Proceed with caution.`;
+
+  const [headerText] = useTypewriter({
+    words: ['TRANSMISSION INTERCEPTED'],
+    loop: 1,
+    typeSpeed: 70,
+    deleteSpeed: 0,
+    delaySpeed: 1000,
+  });
 
   useEffect(() => {
     const timeout = setTimeout(() => setVisible(true), 1000);
@@ -32,13 +41,6 @@ Proceed with caution.`;
         clearInterval(typingInterval);
       }
     }, 18);
-    const [text] = useTypewriter({
-  words: ['TRANSMISSION INTERCEPTED'],
-  loop: 1,
-  typeSpeed: 70,
-  deleteSpeed: 0,
-  delaySpeed: 1000,
-});
     return () => clearInterval(typingInterval);
   }, [visible]);
 
@@ -55,22 +57,22 @@ Proceed with caution.`;
         transition={{ duration: 1.5 }}
         className="text-center space-y-6 max-w-3xl z-10"
       >
-       <h1 className="text-3xl md:text-5xl font-bold glitch text-green-400">
-            TRANSMISSION INTERCEPTED
+        <h1 className="text-3xl md:text-5xl font-bold glitch text-green-400" data-text={headerText}>
+          {headerText}
         </h1>
         <p className="text-lg md:text-xl text-green-300 leading-relaxed whitespace-pre-wrap">
           {typedText}
         </p>
-       <motion.button
-  whileHover={{ scale: 1.1 }}
-  whileTap={{ scale: 0.95 }}
-  animate={{ y: [0, -5, 0] }}
-  transition={{ repeat: Infinity, duration: 2 }}
-  className="mt-6 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-800 transition-all shadow-md"
-  onClick={() => window.location.href = '/lore'}
->
-  Continue to Lore
-</motion.button>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          animate={{ y: [0, -5, 0] }}
+          transition={{ repeat: Infinity, duration: 2 }}
+          className="mt-6 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-800 transition-all shadow-md"
+          onClick={() => window.location.href = '/lore'}
+        >
+          Continue to Lore
+        </motion.button>
       </motion.div>
 
       <style jsx>{`
@@ -120,5 +122,6 @@ Proceed with caution.`;
     </main>
   );
 }
+
 
 
