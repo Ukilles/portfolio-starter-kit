@@ -1,15 +1,38 @@
-'use client';
+"use client";
 
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 export default function EchoPrimeTeaser() {
   const [visible, setVisible] = useState(false);
+  const [typedText, setTypedText] = useState('');
+  const fullText = `This message was not meant for your eyes.
+
+Echo Prime was never found—it was unleashed.
+Orbiting just beyond Stellaxis, the derelict station drifts with purpose, haunted by artificial ghosts and the last breath of a dying civilization. Gilgamesh didn't build it. He woke it.
+
+Inside its hollow walls, something stirs. Records erased. Coordinates corrupted. Signals looping. Anomalies detected.
+
+Proceed with caution.`;
 
   useEffect(() => {
     const timeout = setTimeout(() => setVisible(true), 1000);
     return () => clearTimeout(timeout);
   }, []);
+
+  useEffect(() => {
+    if (!visible) return;
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      if (index < fullText.length) {
+        setTypedText((prev) => prev + fullText[index]);
+        index++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, 18);
+    return () => clearInterval(typingInterval);
+  }, [visible]);
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-black text-green-400 font-mono p-4 relative overflow-hidden">
@@ -27,23 +50,14 @@ export default function EchoPrimeTeaser() {
         <h1 className="text-3xl md:text-5xl font-bold glitch" data-text="TRANSMISSION INTERCEPTED">
           TRANSMISSION INTERCEPTED
         </h1>
-        <p className="text-lg md:text-xl text-green-300 leading-relaxed">
-          This message was not meant for your eyes.
-          <br />
-          <br />
-          Echo Prime was never found—it was unleashed.
-          Orbiting just beyond Stellaxis, the derelict station drifts with purpose, haunted by artificial ghosts and the last breath of a dying civilization. Gilgamesh didn't build it. He woke it.
-          <br />
-          <br />
-          Inside its hollow walls, something stirs. Records erased. Coordinates corrupted. Signals looping. Anomalies detected.
-          <br />
-          <br />
-          Proceed with caution.
+        <p className="text-lg md:text-xl text-green-300 leading-relaxed whitespace-pre-wrap">
+          {typedText}
         </p>
         <motion.button
-          whileHover={{ scale: 1.1, rotate: [0, 1, -1, 0] }}
-          whileTap={{ scale: 0.95 }}
-          className="mt-6 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-800 transition-all shadow-md"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 6, duration: 1 }}
+          className="mt-6 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-800 transition-all shadow-md hover:scale-105"
           onClick={() => window.location.href = '/lore'}
         >
           Continue to Lore
@@ -72,17 +86,30 @@ export default function EchoPrimeTeaser() {
           animation: glitchBottom 2s infinite linear alternate-reverse;
         }
         @keyframes glitchTop {
-          0% { clip: rect(0, 9999px, 0, 0); }
-          5% { clip: rect(0, 9999px, 10px, 0); }
-          10% { clip: rect(0, 9999px, 0, 0); }
+          0% {
+            clip: rect(0, 9999px, 0, 0);
+          }
+          5% {
+            clip: rect(0, 9999px, 10px, 0);
+          }
+          10% {
+            clip: rect(0, 9999px, 0, 0);
+          }
         }
         @keyframes glitchBottom {
-          0% { clip: rect(0, 9999px, 0, 0); }
-          5% { clip: rect(10px, 9999px, 9999px, 0); }
-          10% { clip: rect(0, 9999px, 0, 0); }
+          0% {
+            clip: rect(0, 9999px, 0, 0);
+          }
+          5% {
+            clip: rect(10px, 9999px, 9999px, 0);
+          }
+          10% {
+            clip: rect(0, 9999px, 0, 0);
+          }
         }
       `}</style>
     </main>
   );
 }
+
 
