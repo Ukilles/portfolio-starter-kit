@@ -8,33 +8,31 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
 
-export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
-  title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
-  },
-  description: 'This is my portfolio.',
+export const metadata = {
+  title: "Inkverse | Stories Written in Shadow",
+  description: "Enter the Inkverse — a portal to tales beyond dimensions. Discover lore, darkness, chaos, and the chronicles that shape it all.",
+  keywords: ["Inkverse", "Chronicles of Ink", "sci-fi", "dark fantasy", "RPG universe"],
+  authors: [{ name: "Luciano Gomez" }],
+  creator: "Luciano Gomez",
+  themeColor: "#000000",
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
-    url: baseUrl,
-    siteName: 'My Portfolio',
-    locale: 'en_US',
-    type: 'website',
+    title: "Inkverse",
+    description: "This ain't just a book — it's a damn portal.",
+    url: "https://www.enterinkverse.com",
+    siteName: "Inkverse",
+    images: [
+      {
+        url: "https://www.enterinkverse.com/Logo04.jpg",
+        width: 800,
+        height: 600,
+        alt: "Inkverse Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-}
+};
+
 
 const cx = (...classes) => classes.filter(Boolean).join(' ')
 
