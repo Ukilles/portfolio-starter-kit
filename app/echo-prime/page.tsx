@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from 'react';
 import { useTypewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 
