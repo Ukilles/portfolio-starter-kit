@@ -5,11 +5,12 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white p-6 flex flex-col items-center justify-center space-y-10">
+      
       {/* LOGO */}
       <img
         src="/Logo04.jpg"
         alt="Inkverse Logo"
-        className="w-[160px] sm:w-[220px] md:w-[300px] h-auto mx-auto drop-shadow-xl mt-4"
+        className="w-[180px] sm:w-[240px] md:w-[300px] h-auto mx-auto drop-shadow-2xl mt-4"
       />
 
       {/* HEADER */}
@@ -35,6 +36,7 @@ export default function Home() {
         <p className="text-gray-300 mt-2">
           <em>"Escape from Echo Prime"</em> — a prequel to <em>"The Chronicles of Ink"</em>. Dive into the mystery before the war.
         </p>
+
         <a
           href="#newsletter"
           className="inline-block mt-4 px-6 py-2 bg-purple-600 hover:bg-purple-800 transition-all text-white rounded-lg shadow-md"
