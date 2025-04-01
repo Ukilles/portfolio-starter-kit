@@ -4,18 +4,19 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white px-4 pt-10 pb-16 flex flex-col items-center justify-start space-y-8">
+    <main className="min-h-screen bg-black text-white px-4 pt-8 pb-16 flex flex-col items-center space-y-8">
       {/* Logo */}
       <img
         src="/Logo04.jpg"
         alt="Inkverse Logo"
-        className="w-[160px] sm:w-[220px] md:w-[280px] h-auto mx-auto drop-shadow-2xl"
+        className="w-[160px] sm:w-[220px] md:w-[280px] h-auto mx-auto drop-shadow-2xl mt-4"
       />
 
-      {/* Welcome Message */}
-      <h1 className="text-4xl sm:text-5xl font-extrabold text-purple-500 text-center">
+      {/* Welcome Header */}
+      <h1 className="text-4xl sm:text-5xl font-extrabold text-purple-500 text-center mt-2">
         WELCOME TO THE INKVERSE
       </h1>
+
       <p className="text-center text-gray-300 max-w-2xl">
         The Inkverse is a universe written in shadow, sealed in ink —
         where dark fantasy, sci-fi, and RPG-inspired stories collide across dimensions.
@@ -28,7 +29,7 @@ export default function Home() {
         className="w-full max-w-md rounded-lg shadow-2xl"
       />
 
-      {/* Echo Prime Details */}
+      {/* Echo Prime Info */}
       <div className="text-center space-y-3 mt-4">
         <h2 className="text-yellow-400 text-lg font-bold">Coming Fall 2025</h2>
         <p className="text-gray-300 text-sm italic max-w-md mx-auto">
@@ -49,7 +50,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Newsletter Sign-up */}
+      {/* Newsletter Form */}
       <form
         id="newsletter"
         action="https://formsubmit.co/ukilles@gmail.com"
@@ -77,11 +78,11 @@ export default function Home() {
         </div>
       </form>
 
-      {/* Footer */}
       <footer className="mt-10 text-sm text-gray-500 text-center">
         © 2025 Inkverse. All rights warped.
       </footer>
     </main>
   );
 }
+
 
