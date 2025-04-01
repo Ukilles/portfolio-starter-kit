@@ -7,14 +7,7 @@ export default function Home() {
     <main className="min-h-screen bg-black text-white flex flex-col items-center justify-between p-6 space-y-12">
       {/* Logo */}
       <div className="pt-10">
-        <Image
-          src="/Logo04.jpg"
-          alt="Inkverse Logo"
-          width={300}
-          height={300}
-          priority
-          className="drop-shadow-2xl"
-        />
+        h-auto mx-auto drop-shadow-2xl mt-6 mb-2"
       </div>
 
       {/* Hero Heading */}
