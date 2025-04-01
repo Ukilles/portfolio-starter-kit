@@ -7,8 +7,17 @@ export default function Home() {
     <main className="min-h-screen bg-black text-white flex flex-col items-center justify-between p-6 space-y-12">
       {/* Logo */}
       <div className="pt-10">
-        h-auto mx-auto drop-shadow-2xl mt-6 mb-2"
-      </div>
+       <img
+  src="/Logo04.jpg"
+  alt="Inkverse Logo"
+  className="w-[180px] sm:w-[280px] md:w-[360px] h-auto mx-auto drop-shadow-2xl mt-6 mb-2"
+/>
+
+<img
+  src="/echo-prime-cover.png"
+  alt="Escape from Echo Prime Book Cover"
+  className="w-full max-w-md mx-auto mt-6 rounded-lg shadow-2xl"
+/>
 
       {/* Hero Heading */}
       <div className="text-center max-w-4xl space-y-4">
