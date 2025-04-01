@@ -4,16 +4,16 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white px-4 pt-8 pb-16 flex flex-col items-center justify-start space-y-10">
+    <main className="min-h-screen bg-black text-white px-4 pt-10 pb-16 flex flex-col items-center justify-start space-y-8">
       {/* Logo */}
       <img
         src="/Logo04.jpg"
         alt="Inkverse Logo"
-        className="w-[180px] sm:w-[240px] md:w-[300px] h-auto mx-auto drop-shadow-2xl mt-4"
+        className="w-[160px] sm:w-[220px] md:w-[280px] h-auto mx-auto drop-shadow-2xl"
       />
 
-      {/* Welcome Header */}
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-purple-500 text-center">
+      {/* Welcome Message */}
+      <h1 className="text-4xl sm:text-5xl font-extrabold text-purple-500 text-center">
         WELCOME TO THE INKVERSE
       </h1>
       <p className="text-center text-gray-300 max-w-2xl">
@@ -25,16 +25,16 @@ export default function Home() {
       <img
         src="/echo-prime-cover.png"
         alt="Escape from Echo Prime Book Cover"
-        className="w-full max-w-md mx-auto mt-4 rounded-lg shadow-2xl"
+        className="w-full max-w-md rounded-lg shadow-2xl"
       />
 
-      {/* CTA Box */}
-      <div className="bg-gray-900 bg-opacity-30 p-6 rounded-lg shadow-lg text-center space-y-4">
-        <h2 className="text-yellow-400 text-xl font-bold">Coming Fall 2025</h2>
-        <p className="text-sm italic text-gray-300">
-          <em>"Escape from Echo Prime"</em> — a prequel to <em>"The Chronicles of Ink"</em>.
-          Dive into the mystery before the war.
+      {/* Echo Prime Details */}
+      <div className="text-center space-y-3 mt-4">
+        <h2 className="text-yellow-400 text-lg font-bold">Coming Fall 2025</h2>
+        <p className="text-gray-300 text-sm italic max-w-md mx-auto">
+          <em>"Escape from Echo Prime"</em> — a prequel to <em>"The Chronicles of Ink"</em>. Dive into the mystery before the war.
         </p>
+
         <a
           href="#newsletter"
           className="inline-block px-6 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-800 transition-all"
@@ -42,7 +42,6 @@ export default function Home() {
           Sign up for Echo Prime Updates
         </a>
 
-        {/* Socials */}
         <div className="flex justify-center space-x-4 text-sm text-purple-400">
           <a href="#" target="_blank">Instagram</a>
           <a href="#" target="_blank">Twitter</a>
@@ -79,11 +78,10 @@ export default function Home() {
       </form>
 
       {/* Footer */}
-      <footer className="mt-10 text-sm text-gray-500">
+      <footer className="mt-10 text-sm text-gray-500 text-center">
         © 2025 Inkverse. All rights warped.
       </footer>
     </main>
   );
 }
-
 
