@@ -4,22 +4,22 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white px-4 pt-8 pb-16 flex flex-col items-center space-y-8">
+    <main className="min-h-screen flex flex-col items-center justify-start bg-black text-white p-4 space-y-8">
       {/* Logo */}
       <img
         src="/Logo04.jpg"
         alt="Inkverse Logo"
-        className="w-[160px] sm:w-[220px] md:w-[280px] h-auto mx-auto drop-shadow-2xl mt-4"
+        className="w-[180px] sm:w-[280px] md:w-[360px] h-auto drop-shadow-2xl mt-8"
       />
 
       {/* Welcome Header */}
-      <h1 className="text-4xl sm:text-5xl font-extrabold text-purple-500 text-center mt-2">
+      <h1 className="text-4xl md:text-6xl font-extrabold text-purple-500 text-center tracking-wide">
         WELCOME TO THE INKVERSE
       </h1>
 
-      <p className="text-center text-gray-300 max-w-2xl">
-        The Inkverse is a universe written in shadow, sealed in ink —
-        where dark fantasy, sci-fi, and RPG-inspired stories collide across dimensions.
+      {/* Tagline */}
+      <p className="text-center text-sm md:text-base text-gray-300 max-w-xl">
+        The Inkverse is a universe written in shadow, sealed in ink — where dark fantasy, sci-fi, and RPG-inspired stories collide across dimensions.
       </p>
 
       {/* Book Cover */}
@@ -29,35 +29,36 @@ export default function Home() {
         className="w-full max-w-md rounded-lg shadow-2xl"
       />
 
-      {/* Echo Prime Info */}
-      <div className="text-center space-y-3 mt-4">
-        <h2 className="text-yellow-400 text-lg font-bold">Coming Fall 2025</h2>
-        <p className="text-gray-300 text-sm italic max-w-md mx-auto">
-          <em>"Escape from Echo Prime"</em> — a prequel to <em>"The Chronicles of Ink"</em>. Dive into the mystery before the war.
+      {/* Echo Prime CTA */}
+      <div className="text-center space-y-4 mt-4">
+        <h2 className="text-yellow-400 text-xl font-bold">Coming Fall 2025</h2>
+        <p className="text-sm italic text-gray-200 max-w-md mx-auto">
+          <span className="text-white">*Escape from Echo Prime*</span> — a prequel to <span className="text-white">*The Chronicles of Ink*</span>. Dive into the mystery before the war.
         </p>
 
         <a
-          href="#newsletter"
-          className="inline-block px-6 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-800 transition-all"
+          href="#subscribe"
+          className="inline-block bg-purple-600 hover:bg-purple-800 transition-all text-white px-6 py-2 rounded-xl text-sm shadow-md"
         >
           Sign up for Echo Prime Updates
         </a>
 
-        <div className="flex justify-center space-x-4 text-sm text-purple-400">
-          <a href="#" target="_blank">Instagram</a>
-          <a href="#" target="_blank">Twitter</a>
-          <a href="#" target="_blank">Facebook</a>
+        {/* Social Links */}
+        <div className="text-xs text-gray-400 flex justify-center space-x-6 pt-2">
+          <a href="https://instagram.com" target="_blank">Instagram</a>
+          <a href="https://twitter.com" target="_blank">Twitter</a>
+          <a href="https://facebook.com" target="_blank">Facebook</a>
         </div>
       </div>
 
-      {/* Newsletter Form */}
+      {/* Email Signup */}
       <form
-        id="newsletter"
         action="https://formsubmit.co/ukilles@gmail.com"
         method="POST"
-        className="mt-8 w-full max-w-sm text-center space-y-3"
+        className="mt-10 w-full max-w-sm text-sm"
+        id="subscribe"
       >
-        <label htmlFor="email" className="block text-sm text-gray-400">
+        <label htmlFor="email" className="block text-gray-400 mb-2 text-center">
           Join the Resistance — get Inkverse updates straight to your inbox.
         </label>
         <div className="flex space-x-2">
@@ -78,11 +79,11 @@ export default function Home() {
         </div>
       </form>
 
-      <footer className="mt-10 text-sm text-gray-500 text-center">
+      {/* Footer */}
+      <footer className="text-xs text-gray-600 pt-12 text-center">
         © 2025 Inkverse. All rights warped.
       </footer>
     </main>
   );
 }
-
 
