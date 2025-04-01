@@ -5,31 +5,31 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white p-6 flex flex-col items-center justify-center space-y-10">
-      {/* Logo */}
+      {/* LOGO */}
       <img
         src="/Logo04.jpg"
         alt="Inkverse Logo"
-        className="w-[180px] sm:w-[280px] md:w-[360px] h-auto mx-auto drop-shadow-2xl mt-6 mb-2"
+        className="w-[160px] sm:w-[220px] md:w-[300px] h-auto mx-auto drop-shadow-xl mt-4"
       />
 
-      {/* Header */}
+      {/* HEADER */}
       <h1 className="text-4xl md:text-6xl font-extrabold text-purple-500 text-center">
         WELCOME TO THE INKVERSE
       </h1>
 
-      {/* Description */}
+      {/* DESCRIPTION */}
       <p className="text-center text-gray-300 max-w-2xl text-lg">
         The Inkverse is a universe written in shadow, sealed in ink — where dark fantasy, sci-fi, and RPG-inspired stories collide across dimensions.
       </p>
 
-      {/* Book Cover */}
+      {/* BOOK COVER */}
       <img
         src="/echo-prime-cover.png"
         alt="Escape from Echo Prime Book Cover"
         className="w-full max-w-md mx-auto mt-4 rounded-lg shadow-2xl"
       />
 
-      {/* Echo Prime Promo */}
+      {/* BOOK TEASER */}
       <div className="text-center max-w-xl text-sm sm:text-base">
         <h2 className="text-yellow-400 font-bold text-xl mt-6">Coming Fall 2025</h2>
         <p className="text-gray-300 mt-2">
@@ -42,15 +42,15 @@ export default function Home() {
           Sign up for Echo Prime Updates
         </a>
 
-        {/* Social Links */}
+        {/* SOCIAL LINKS */}
         <div className="flex justify-center space-x-6 mt-4 text-sm text-purple-400">
-          <a href="https://instagram.com" target="_blank">Instagram</a>
-          <a href="https://twitter.com" target="_blank">Twitter</a>
-          <a href="https://facebook.com" target="_blank">Facebook</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
       </div>
 
-      {/* Newsletter Form */}
+      {/* NEWSLETTER FORM */}
       <form
         id="newsletter"
         action="https://formsubmit.co/ukilles@gmail.com"
@@ -78,11 +78,12 @@ export default function Home() {
         </div>
       </form>
 
-      {/* Footer */}
+      {/* FOOTER */}
       <footer className="text-sm text-gray-500 mt-10">
         © 2025 Inkverse. All rights warped.
       </footer>
     </main>
   );
 }
+
 
