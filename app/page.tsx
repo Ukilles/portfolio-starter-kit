@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-start bg-black text-white px-40 pt-10 pb-150 space-y-100 relative overflow-x-hidden">
+    <main className="min-h-screen flex flex-col items-center justify-start bg-black text-white px-4 pt-28 pb-100 space-y-100 relative overflow-x-hidden">
       {/* Stars Background */}
       <div className="absolute inset-0 z-0 bg-[url('/stars.gif')] bg-cover opacity-20 mix-blend-lighten" />
 
@@ -12,7 +12,7 @@ export default function Home() {
       <img
         src="/Logo04.jpg"
         alt="Inkverse Logo"
-        className="w-[180px] sm:w-[260px] md:w-[340px] h-auto drop-shadow-2xl z-10"
+        className="w-[180px] sm:w-[260px] md:w-[340px] h-auto drop-shadow-2xl z-5"
       />
 
       {/* Heading */}
