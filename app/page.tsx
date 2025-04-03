@@ -8,8 +8,8 @@ export default function Home() {
       {/* Stars Background */}
       <div className="absolute inset-0 z-0 bg-[url('/stars.gif')] bg-cover opacity-20 mix-blend-lighten" />
 
-      {/* Logo Header */}
-      <header className="w-full flex justify-center pt-10 pb-10 relative z-10">
+      {/* Logo */}
+      <header className="w-full flex justify-center pt-10 pb-6 relative z-10">
         <img
           src="/Logo04.jpg"
           alt="Inkverse Logo"
@@ -20,7 +20,7 @@ export default function Home() {
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center space-y-10 pb-20">
 
-        {/* Heading */}
+        {/* WELCOME Title */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-purple-500 text-center">
           WELCOME TO THE INKVERSE
         </h1>
