@@ -4,13 +4,13 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-  <main className="min-h-screen flex flex-col items-center justify-start bg-black text-white px-4 pt-[80px] sm:pt-[80px] md:pt-[96vh] space-y-10 relative overflow-x-hidden">
+  <main className="min-h-screen flex flex-col items-center justify-start bg-black text-white px-4 pt-[60px] sm:pt-[80px] md:pt-[96vh] space-y-10 relative overflow-x-hidden">
 
       {/* Stars Background */}
       <div className="absolute inset-0 bg-[url('/stars.gif')] bg-cover mix-blend-lighten opacity-20 z-0" />
 
       {/* Content Wrapper */}
-      <div className="relative z-10 flex flex-col items-center px-4 pt-[64vh] space-y-10 pb-20">
+      <div className="relative z-10 flex flex-col items-center px-4 pt-[96vh] space-y-10 pb-20">
 
         {/* Logo */}
         <img
