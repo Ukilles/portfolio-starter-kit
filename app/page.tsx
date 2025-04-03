@@ -4,55 +4,75 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-start bg-black text-white px-4 pt-12 sm:pt-16 md:pt-20 space-y-10 relative overflow-x-hidden">
+    <main className="bg-black text-white relative min-h-screen overflow-x-hidden">
       {/* Stars Background */}
-      <div className="absolute inset-0 z-0 bg-[url('/stars.gif')] bg-cover opacity-20 mix-blend-lighten" />
+      <div className="absolute inset-0 bg-[url('/stars.gif')] bg-cover mix-blend-lighten opacity-20 z-0" />
 
-      {/* Logo */}
-      <img
-        src="/Logo04.jpg"
-        alt="Inkverse Logo"
-        className="w-[160px] sm:w-[220px] md:w-[280px] h-auto mt-8 sm:mt-12 md:mt-16 drop-shadow-2xl z-10"
-      />
+      {/* Content Wrapper */}
+      <div className="relative z-10 flex flex-col items-center px-4 pt-[96vh] space-y-10 pb-20">
 
-      {/* Welcome Title */}
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-purple-500 text-center">
-        WELCOME TO THE INKVERSE
-      </h1>
+        {/* Logo */}
+        <img
+          src="/Logo04.jpg"
+          alt="Inkverse Logo"
+          className="w-[200px] sm:w-[260px] md:w-[320px] h-auto drop-shadow-2xl"
+        />
 
-      {/* Description */}
-      <p className="text-center max-w-2xl text-sm sm:text-base text-slate-300">
-        The Inkverse is a universe written in shadow, sealed in ink —
-        where dark fantasy, sci-fi, and RPG-inspired stories collide across dimensions.
-      </p>
+        {/* Header */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-purple-500 text-center">
+          WELCOME TO THE INKVERSE
+        </h1>
 
-      {/* Book Cover */}
-      <img
-        src="/echo-prime-cover.png"
-        alt="Escape from Echo Prime Book Cover"
-        className="w-full max-w-md mx-auto mt-6 rounded-lg shadow-2xl"
-      />
-
-      {/* Call to Action */}
-      <div className="text-center space-y-2">
-        <h2 className="text-yellow-400 text-lg font-bold">Coming Fall 2025</h2>
-        <p className="text-sm italic max-w-lg text-slate-300 mx-auto">
-          <span className="italic">*Escape from Echo Prime*</span> — a prequel to
-          <span className="italic"> *The Chronicles of Ink*</span>. Dive into the mystery before the war.
+        {/* Description */}
+        <p className="text-sm sm:text-base md:text-lg text-center text-slate-300 max-w-2xl">
+          The Inkverse is a universe written in shadow, sealed in ink — where dark fantasy, sci-fi, and RPG-inspired stories collide across dimensions.
         </p>
-        <a
-          href="#"
-          className="inline-block px-6 py-2 mt-2 bg-purple-600 text-white rounded-lg shadow hover:bg-purple-700 transition"
-        >
-          Sign up for Echo Prime Updates
-        </a>
-        <div className="space-x-4 text-sm text-purple-400 mt-2">
-          <a href="#">Instagram</a>
-          <a href="#">Twitter</a>
-          <a href="#">Facebook</a>
+
+        {/* Book Cover */}
+        <img
+          src="/echo-prime-cover.png"
+          alt="Escape from Echo Prime Book Cover"
+          className="w-full max-w-md mx-auto rounded-lg shadow-2xl"
+        />
+
+        {/* Coming Soon Info */}
+        <div className="text-center space-y-4">
+          <h2 className="text-yellow-400 font-bold text-xl">Coming Fall 2025</h2>
+          <p className="text-sm italic text-slate-300 max-w-md">
+            <em>"Escape from Echo Prime"</em> — a prequel to <em>"The Chronicles of Ink"</em>. Dive into the mystery before the war.
+          </p>
+          <Link href="https://your-subscription-link.com">
+            <button className="bg-purple-600 hover:bg-purple-800 text-white font-semibold py-2 px-6 rounded-lg shadow-lg transition duration-300">
+              Sign up for Echo Prime Updates
+            </button>
+          </Link>
+          <div className="flex justify-center gap-6 text-sm text-slate-400 pt-2">
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+          </div>
         </div>
+
+        {/* Email Signup */}
+        <div className="pt-12 text-center">
+          <p className="text-slate-400 mb-2">Join the Resistance — get Inkverse updates straight to your inbox.</p>
+          <form className="flex items-center justify-center gap-2 flex-wrap">
+            <input
+              type="email"
+              placeholder="you@galaxy.net"
+              className="px-4 py-2 rounded-lg bg-slate-800 text-white placeholder-slate-400 w-64"
+            />
+            <button type="submit" className="bg-purple-600 hover:bg-purple-800 text-white px-4 py-2 rounded-lg">
+              Join
+            </button>
+          </form>
+        </div>
+
+        {/* Footer */}
+        <footer className="pt-12 text-xs text-slate-500 text-center">
+          © 2025 Inkverse. All rights warped.
+        </footer>
       </div>
     </main>
   );
 }
-
