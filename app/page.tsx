@@ -8,15 +8,17 @@ export default function Home() {
       {/* Stars Background */}
       <div className="absolute inset-0 z-0 bg-[url('/stars.gif')] bg-cover opacity-20 mix-blend-lighten" />
 
-      {/* Content Container */}
-      <div className="relative z-10 flex flex-col items-center pt-28 pb-20 space-y-10">
-        
-        {/* Logo */}
+      {/* Logo Header */}
+      <header className="w-full flex justify-center pt-10 pb-10 relative z-10">
         <img
           src="/Logo04.jpg"
           alt="Inkverse Logo"
           className="w-[200px] sm:w-[260px] md:w-[320px] h-auto drop-shadow-2xl"
         />
+      </header>
+
+      {/* Main Content */}
+      <div className="relative z-10 flex flex-col items-center space-y-10 pb-20">
 
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-purple-500 text-center">
