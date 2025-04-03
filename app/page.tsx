@@ -4,19 +4,21 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-start bg-black text-white px-4 pt-[12rem] pb-[10rem] space-y-10 relative overflow-x-hidden">
+    <main className="min-h-screen flex flex-col items-center justify-start bg-black text-white px-4 py-10 relative overflow-x-hidden space-y-8">
       {/* Stars Background */}
       <div className="absolute inset-0 z-0 bg-[url('/stars.gif')] bg-cover opacity-20 mix-blend-lighten" />
 
       {/* Logo */}
-      <img
-        src="/Logo04.jpg"
-        alt="Inkverse Logo"
-        className="w-[180px] sm:w-[260px] md:w-[340px] h-auto drop-shadow-2xl z-10"
-      />
+      <div className="z-10 mt-10">
+        <img
+          src="/Logo04.jpg"
+          alt="Inkverse Logo"
+          className="w-[180px] sm:w-[240px] md:w-[300px] h-auto drop-shadow-2xl"
+        />
+      </div>
 
       {/* Welcome Heading */}
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-purple-500 text-center z-10">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-purple-500 text-center z-10 mt-4">
         WELCOME TO THE INKVERSE
       </h1>
 
@@ -32,7 +34,7 @@ export default function Home() {
         className="w-full max-w-md mx-auto rounded-lg shadow-2xl z-10"
       />
 
-      {/* Coming Soon Box */}
+      {/* Coming Soon Section */}
       <div className="text-center space-y-4 z-10">
         <h2 className="text-yellow-400 font-bold text-xl">Coming Fall 2025</h2>
         <p className="text-sm italic text-slate-300 max-w-md">
@@ -74,5 +76,4 @@ export default function Home() {
     </main>
   );
 }
-
 
