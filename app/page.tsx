@@ -5,11 +5,11 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main className="bg-black text-white relative min-h-screen overflow-x-hidden">
-      {/* Stars BG */}
+      {/* Stars Background */}
       <div className="absolute inset-0 bg-[url('/stars.gif')] bg-cover mix-blend-lighten opacity-20 z-0" />
 
-      {/* Page Wrapper with Top Padding */}
-      <div className="relative z-10 flex flex-col items-center px-4 pt-[10vh] space-y-10 pb-20">
+      {/* Content Wrapper */}
+      <div className="relative z-10 flex flex-col items-center px-4 pt-[18vh] space-y-10 pb-20">
 
         {/* Logo */}
         <img
@@ -18,7 +18,7 @@ export default function Home() {
           className="w-[200px] sm:w-[260px] md:w-[320px] h-auto drop-shadow-2xl"
         />
 
-        {/* Welcome Heading */}
+        {/* Header */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-purple-500 text-center">
           WELCOME TO THE INKVERSE
         </h1>
@@ -35,7 +35,7 @@ export default function Home() {
           className="w-full max-w-md mx-auto rounded-lg shadow-2xl"
         />
 
-        {/* Book CTA */}
+        {/* Coming Soon Info */}
         <div className="text-center space-y-4">
           <h2 className="text-yellow-400 font-bold text-xl">Coming Fall 2025</h2>
           <p className="text-sm italic text-slate-300 max-w-md">
@@ -53,7 +53,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Email Newsletter */}
+        {/* Email Signup */}
         <div className="pt-12 text-center">
           <p className="text-slate-400 mb-2">Join the Resistance — get Inkverse updates straight to your inbox.</p>
           <form className="flex items-center justify-center gap-2 flex-wrap">
@@ -76,4 +76,3 @@ export default function Home() {
     </main>
   );
 }
-
