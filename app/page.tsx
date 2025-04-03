@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-start bg-black text-white px-4 pt-28 pb-100 space-y-100 relative overflow-x-hidden">
+    <main className="min-h-screen flex flex-col items-center justify-start bg-black text-white px-4 pt-[12rem] pb-[10rem] space-y-10 relative overflow-x-hidden">
       {/* Stars Background */}
       <div className="absolute inset-0 z-0 bg-[url('/stars.gif')] bg-cover opacity-20 mix-blend-lighten" />
 
@@ -12,16 +12,16 @@ export default function Home() {
       <img
         src="/Logo04.jpg"
         alt="Inkverse Logo"
-        className="w-[180px] sm:w-[260px] md:w-[340px] h-auto drop-shadow-2xl z-5"
+        className="w-[180px] sm:w-[260px] md:w-[340px] h-auto drop-shadow-2xl z-10"
       />
 
-      {/* Heading */}
-      <h1 className="text-4xl md:text-6xl font-extrabold text-purple-500 text-center z-10 animate-fade-in">
+      {/* Welcome Heading */}
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-purple-500 text-center z-10">
         WELCOME TO THE INKVERSE
       </h1>
 
-      {/* Description */}
-      <p className="text-center text-sm md:text-base text-gray-300 max-w-xl z-10 animate-fade-in delay-100">
+      {/* Intro Text */}
+      <p className="text-sm sm:text-base md:text-lg text-center text-slate-300 max-w-2xl z-10">
         The Inkverse is a universe written in shadow, sealed in ink — where dark fantasy, sci-fi, and RPG-inspired stories collide across dimensions.
       </p>
 
@@ -29,80 +29,50 @@ export default function Home() {
       <img
         src="/echo-prime-cover.png"
         alt="Escape from Echo Prime Book Cover"
-        className="w-full max-w-md rounded-lg shadow-2xl z-10 animate-fade-in delay-200"
+        className="w-full max-w-md mx-auto rounded-lg shadow-2xl z-10"
       />
 
-      {/* Echo Prime Teaser */}
-      <div className="text-center space-y-4 mt-2 z-10 animate-fade-in delay-300">
-        <h2 className="text-yellow-400 text-xl font-bold">Coming Fall 2025</h2>
-        <p className="text-sm italic text-gray-200 max-w-md mx-auto">
-          <span className="text-white">*Escape from Echo Prime*</span> — a prequel to <span className="text-white">*The Chronicles of Ink*</span>. Dive into the mystery before the war.
+      {/* Coming Soon Box */}
+      <div className="text-center space-y-4 z-10">
+        <h2 className="text-yellow-400 font-bold text-xl">Coming Fall 2025</h2>
+        <p className="text-sm italic text-slate-300 max-w-md">
+          <em>"Escape from Echo Prime"</em> — a prequel to <em>"The Chronicles of Ink"</em>. Dive into the mystery before the war.
         </p>
+        <Link href="https://your-subscription-link.com" passHref>
+          <button className="bg-purple-600 hover:bg-purple-800 text-white font-semibold py-2 px-6 rounded-lg shadow-lg transition duration-300">
+            Sign up for Echo Prime Updates
+          </button>
+        </Link>
 
-        <a
-          href="#subscribe"
-          className="inline-block bg-purple-600 hover:bg-purple-800 transition-all text-white px-6 py-2 rounded-xl text-sm shadow-lg animate-pulse"
-        >
-          Sign up for Echo Prime Updates
-        </a>
-
-        <div className="text-xs text-gray-400 flex justify-center space-x-6 pt-2">
-          <a href="https://instagram.com" target="_blank">Instagram</a>
-          <a href="https://twitter.com" target="_blank">Twitter</a>
-          <a href="https://facebook.com" target="_blank">Facebook</a>
+        {/* Social Links */}
+        <div className="flex justify-center gap-6 text-sm text-slate-400 pt-2">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
       </div>
 
-      {/* Email Signup */}
-      <form
-        action="https://formsubmit.co/ukilles@gmail.com"
-        method="POST"
-        className="w-full max-w-sm text-sm z-10 animate-fade-in delay-500"
-        id="subscribe"
-      >
-        <label htmlFor="email" className="block text-gray-400 mb-2 text-center">
-          Join the Resistance — get Inkverse updates straight to your inbox.
-        </label>
-        <div className="flex space-x-2">
+      {/* Newsletter */}
+      <div className="pt-12 text-center z-10">
+        <p className="text-slate-400 mb-2">Join the Resistance — get Inkverse updates straight to your inbox.</p>
+        <form className="flex items-center justify-center gap-2">
           <input
             type="email"
-            id="email"
-            name="email"
-            required
             placeholder="you@galaxy.net"
-            className="flex-1 px-4 py-2 rounded-lg bg-gray-800 text-white placeholder-gray-500 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="px-4 py-2 rounded-lg bg-slate-800 text-white placeholder-slate-400 w-64"
           />
-          <button
-            type="submit"
-            className="px-4 py-2 rounded-lg bg-purple-700 hover:bg-purple-900 transition-all text-white"
-          >
+          <button type="submit" className="bg-purple-600 hover:bg-purple-800 text-white px-4 py-2 rounded-lg">
             Join
           </button>
-        </div>
-      </form>
+        </form>
+      </div>
 
       {/* Footer */}
-      <footer className="text-xs text-gray-600 pt-12 text-center z-10">
+      <footer className="pt-12 text-xs text-slate-500 z-10">
         © 2025 Inkverse. All rights warped.
       </footer>
-
-      {/* Custom Animation Styles */}
-      <style jsx>{`
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-
-        .animate-fade-in {
-          animation: fade-in 1s ease-out forwards;
-        }
-
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
-        .delay-500 { animation-delay: 0.5s; }
-      `}</style>
     </main>
   );
 }
+
 
