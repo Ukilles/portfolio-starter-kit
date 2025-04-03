@@ -4,7 +4,8 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="bg-black text-white relative min-h-screen overflow-x-hidden">
+  <main className="min-h-screen flex flex-col items-center justify-start bg-black text-white px-4 pt-[64px] sm:pt-[96px] md:pt-[96vh] space-y-10 relative overflow-x-hidden">
+
       {/* Stars Background */}
       <div className="absolute inset-0 bg-[url('/stars.gif')] bg-cover mix-blend-lighten opacity-20 z-0" />
 
