@@ -9,7 +9,7 @@ export default function Home() {
       <div className="absolute inset-0 z-0 bg-[url('/stars.gif')] bg-cover opacity-20 mix-blend-lighten" />
 
       {/* Logo */}
-      <header className="w-full flex justify-center pt-12 pb-6 relative z-10">
+      <header className="w-full flex pt-10 pb-6 relative z-10">
         <img
           src="/Logo04.jpg"
           alt="Inkverse Logo"
