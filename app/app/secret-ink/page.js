@@ -1,5 +1,5 @@
 import Head from 'next/head';
-https://www.enterinkverse.com/secret-ink
+
 export default function SecretInkPage() {
   return (
     <>
