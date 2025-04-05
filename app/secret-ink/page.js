@@ -15,4 +15,4 @@ export default function SecretInkPage() {
   );
 }
 
-Add secret-ink route
+
