@@ -1,4 +1,3 @@
-
 import Head from 'next/head';
 
 export default function SecretInkPage() {
@@ -15,4 +14,5 @@ export default function SecretInkPage() {
     </>
   );
 }
+
 Add secret-ink route
